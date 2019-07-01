@@ -43,6 +43,10 @@ private slots:
 
     void on_doubleSpinBox_P_2_valueChanged(double arg1);
 
+    void on_pushButton_Fin_clicked();
+
+    void on_pushButton_Fout_clicked();
+
 private:
     Ui::MainWindow *ui;
     int isUse;
@@ -54,6 +58,7 @@ private:
     void setE();
     void setM();
     QTimer *timer;
+    bool may_change = true;
 };
 
 #endif // MAINWINDOW_H
