@@ -26,6 +26,7 @@ public:
     virtual void inLitr(double kol);
     virtual void draw() = 0;
 
+
 protected:
     double Litr;
 };

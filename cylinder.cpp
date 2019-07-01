@@ -18,6 +18,7 @@ void Cylinder::setRH(double r, double h)
         throw QString("Нельзя отрицательное значение");
     else
     {
+        Litr = 0;
         H=h;
         R=r;
     }
@@ -30,13 +31,17 @@ double Cylinder::Volume()
 
 double Cylinder::getHOfLitr()
 {
-    return Litr/PI*R*R;
+    return Litr/(PI*R*R);
 }
 
 void Cylinder::draw()
 {
-    gluCylinder(quadratic,1.0,1.0,3.0,32,32); // Рисуем наш цилиндр
-    gluDisk(quadratic,0.5,1.5,32,32); // Рисуем диск (в виде CD)
+    glColor3d(1, 0, 0);
+    gluCylinder(quadratic,R,R,H,32,32); // Рисуем наш цилиндр
+
+    glTranslated(0,0,getHOfLitr());
+    glColor3d(0, 1, 0);
+    gluDisk(quadratic,R,R+1,32,32); // Рисуем диск (в виде CD)
 }
 
 double Cylinder::getR()

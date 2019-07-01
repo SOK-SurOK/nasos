@@ -10,6 +10,12 @@ MyGL::MyGL(QWidget *parrent):
     XYZ = 1;
 }
 
+void MyGL::setE(Emkost *e)
+{
+    isSetNode = true;
+    E = e;
+}
+
 void MyGL::delE()
 {
     isSetNode = false;
