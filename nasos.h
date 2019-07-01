@@ -13,14 +13,13 @@ public:
     double getPotok();
     void Start();
     void Stop();
+    void Do();
 
 private:
     bool State;
     double Potok;
     Emkost *InE, *OutE;
 
-    void updateInE();
-    void updateOutE();
 };
 
 #endif // NASOS_H

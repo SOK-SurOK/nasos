@@ -7,12 +7,14 @@ class Cylinder: public Emkost
 {
 public:
     explicit Cylinder();
-    void setRH(float r, float h);
+    void setRH(double r, double h);
     double Volume() override;
     double getHOfLitr() override;
+    void draw() override;
     double getR();
     double getH();
 private:
+    GLUquadricObj *quadratic;    // Место для хранения объекта Quadratic ( НОВОЕ )
     double R, H;
 };
 

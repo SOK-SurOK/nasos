@@ -3,10 +3,12 @@
 
 #include "emkost.h"
 #include "cylinder.h"
+#include <QObject>
+#include <QRandomGenerator>
 
 struct Node
 {
-    int x, WhatUse;
+    int x;
     Emkost *E;
     Node *next;
 };

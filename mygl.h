@@ -13,11 +13,11 @@ class MyGL: public QGLWidget
     Q_OBJECT
 
 public:
-    MyGL(QWidget* parrent = nullptr);
+    MyGL(QWidget *parrent = nullptr);
     void setE(Emkost *e);
     void delE();
     void setXYZ(int xyz);
-    void drawC2(bool i);
+    //void drawC2(bool i);
     void drawXYZ(bool i);
 
 private:
@@ -33,7 +33,7 @@ private:
     Emkost *E;
 
     void drawAxis(float x, float y, float z);
-    void drawEmkost();
+    //void drawEmkost();
 
 protected:
     void initializeGL() override;
